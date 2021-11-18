@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Room';
+  font-weight: 300;
+  src: url('../fonts/room_light.woff') format('woff'),
+  url('../fonts/room_light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Room';
+  font-weight: 400;
+  src: url('../fonts/room_regular.woff') format('woff'),
+  url('../fonts/room_regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Room';
+  font-weight: 700;
+  src: url('../fonts/room_bold.woff') format('woff'),
+  url('../fonts/room_bold.woff2') format('woff2');
+}
+
+body {
+  font-family: 'Room', 'Arial', 'sans-serif';
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 23px;
+    line-height: 32px;
+  }
+}

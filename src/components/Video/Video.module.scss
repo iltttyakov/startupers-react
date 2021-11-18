@@ -1,0 +1,171 @@
+.box {
+  position: relative;
+  z-index: 1;
+
+  width: 55vw;
+  height: 39vw;
+
+  border-radius: 64px;
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    z-index: -1;
+
+    border-radius: 64px;
+  }
+
+  &::before {
+    left: 103px;
+    top: -73px;
+
+    width: 400px;
+    height: 400px;
+
+    background-color: #293FFB;
+    border-radius: 64px;
+  }
+
+  &::after {
+    right: -73px;
+    bottom: -96px;
+
+    height: 477px;
+    width: 513px;
+
+    background: #00E392;
+    border-radius: 64px;
+  }
+}
+
+.player {
+  overflow: hidden;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: #1D203B;
+  border-radius: 64px;
+  box-shadow: 16px -16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.cover {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 64px;
+}
+
+.playButton {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+
+  width: 96px;
+  height: 96px;
+  margin-left: -48px;
+  margin-top: -48px;
+
+
+  background: #293FFB;
+  border-radius: 40px;
+  border: none;
+}
+
+.playIcon {
+  margin-top: 5px;
+}
+
+.box.playing {
+  .cover {
+    z-index: -1;
+  }
+
+  .playButton {
+    z-index: -1;
+  }
+}
+
+@media (max-width: 1366px) {
+  .box {
+    &::after {
+      right: -50px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    &::before,
+    &::after {
+      border-radius: 29px;
+    }
+
+    &::before {
+      width: 181px;
+      height: 181px;
+    }
+
+    &::after {
+      width: 232px;
+      height: 216px;
+      max-width: 50%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+    border-radius: 25px;
+
+    &::before {
+      left: 23px;
+      top: -33px;
+    }
+
+    &::after {
+      right: -24px;
+      bottom: -22px;
+      max-width: 100%;
+    }
+  }
+
+  .player {
+    min-height: 220px;
+    border-radius: 25px;
+  }
+
+  .cover {
+    border-radius: 25px;
+  }
+
+  .player {
+    box-shadow: 6.29873px -6.29873px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .playButton {
+    width: 64px;
+    height: 64px;
+
+    margin-left: -32px;
+    margin-top: -32px;
+  }
+
+  .playIcon {
+    width: 16px;
+    height: 21.33px;
+  }
+}

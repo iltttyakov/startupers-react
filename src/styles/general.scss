@@ -1,0 +1,47 @@
+body {
+  min-width: 320px;
+
+  background-color: #1D203C;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.content-box-component {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+}
+
+a,
+button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &:active {
+    opacity: .5;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
